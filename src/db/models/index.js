@@ -1,3 +1,7 @@
 const { Person } = require('./persons.model');
 
-function setupModels
+function setupModels(sequelize) {
+    Person.init(PersonSchema, Person.config(sequelize));
+}
+
+module.exports = setupModels;
